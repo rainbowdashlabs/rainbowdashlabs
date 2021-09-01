@@ -8,5 +8,7 @@ I mainly work on plugins published under my [Eldoria RPG](https://github.com/eld
 
 If you want to contact me, the fastest way is via Discord ([Chojo#0001](https://discordapp.com/users/214347948316819456/))
 
+**I also heard that cool persons leave a small message in my [Guestbook](https://github.com/RainbowDashLabs/RainbowDashLabs/discussions/1)**
+
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=RainbowDashLabs&show_icons=true&count_private=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)\
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RainbowDashLabs&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
