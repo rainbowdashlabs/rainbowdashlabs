@@ -20,7 +20,10 @@ my [Guestbook](https://github.com/RainbowDashLabs/RainbowDashLabs/discussions/1)
 
 ### How did I get here?
 
-Well then you will get a story.
+You want a story? Well then you will get a story.
+
+<details>
+  <summary>Click me OwO</summary>
 
 #### The earlies
 
@@ -122,3 +125,5 @@ today.
    software is 30% writing of new code and 70% rewriting and thinking about the implementation.
 7. Google\
    The most important skill of a programmer is google. We don’t know everything, but we know where to find it.
+
+   </details>
