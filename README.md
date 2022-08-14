@@ -15,8 +15,9 @@ Discord ([Chojo#0001](https://discordapp.com/users/214347948316819456/))
 **I also heard that cool persons leave a cool message in
 my [Guestbook](https://github.com/RainbowDashLabs/RainbowDashLabs/discussions/1)**
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=RainbowDashLabs&show_icons=true&count_private=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)\
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RainbowDashLabs&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=RainbowDashLabs&show_icons=true&count_private=true&theme=radical&layout=compact)](https://github.com/anuraghazra/github-readme-stats)\
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api/wakatime?username=chojo&theme=radical&layout=compact&custom_title=My%20Timesinks)](https://github.com/anuraghazra/github-readme-stats)\
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RainbowDashLabs&theme=radical&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 ### How did I get here?
 
