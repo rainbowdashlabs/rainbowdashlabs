@@ -1,6 +1,23 @@
 #!/usr/bin/env ruby
 
 require 'gitlab_kramdown'
+require 'digest/md5'
+
+class Util
+  def self.str_hash(str)
+    hi1, hi2, mid, lo = *Digest::MD5.digest(str).unpack('cCnN')
+    hi1 << 56 | hi2 << 48 | mid << 32 | lo
+  end
+
+  def self.filename_to_write(item)
+    if ENV["DEV_ENV"]
+      yield item.identifier.without_ext
+    else
+      yield "#{item.identifier.without_ext}-#{str_hash(item.raw_content)}"
+    end
+  end
+end
+
 TITLE_FILTER_REGEXP = /(#\s)/.freeze
 
 preprocess do
@@ -38,7 +55,34 @@ compile '/**/*.md' do
   filter :relativize_paths, :type => :html
 end
 
+
+route '/**/*.{html,md}' do
+  if item.identifier =~ '/index.*'
+    '/index.html'
+  else
+    "#{item.identifier.without_ext}.html"
+  end
+end
+
 layout '/**/*', :haml, format: :html5
+
+ignore '/**/_*.scss'
+
+compile '/**/*.scss' do
+  filter :sass,
+         syntax: :scss,
+         style: :compressed
+  filter :relativize_paths, :type => :css
+  Util.filename_to_write item do |name|
+    write "#{name}.css"
+  end
+end
+
+compile '/**/*.js' do
+  Util.filename_to_write item do |name|
+    write "#{name}.js"
+  end
+end
 
 compile '/**/*' do
   write item.identifier.to_s

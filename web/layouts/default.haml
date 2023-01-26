@@ -11,7 +11,7 @@
     - @items.find_all("/js/*.js").each do |item|
       %script{src: item.path}
 
-    %link{rel: "shortcut icon", type: "image/png", href: items["/img/favicon.png"].path}
+    -# %link{rel: "shortcut icon", type: "image/png", href: items["/img/favicon.png"].path}
 
     %title
       = item[:title]

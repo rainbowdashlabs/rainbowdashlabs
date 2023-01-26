@@ -1,12 +1,6 @@
 services:
-  hugo:
-    image: ruby:latest
-    environment:
-      - UID=1000
-      - GID=1000
-    command: server --disableFastRender --buildDrafts
+  nanoc:
+    container_name: nanoc
+    build: .
     ports:
-      - 80:1313
-    volumes:
-      - .:/src
-    user: 1000:1000
+      - 80:80
