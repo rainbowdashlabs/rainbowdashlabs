@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+gem "nanoc", "~> 4.12"
+
+gem "haml", "~> 6.1"
+
+gem "gitlab_kramdown", "~> 0.23.0"

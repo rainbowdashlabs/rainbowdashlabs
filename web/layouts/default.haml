@@ -1,0 +1,20 @@
+!!! 5
+%html{lang: "en"}
+  %head
+    / Total items: #{@items.size}
+    %meta{charset: "utf-8"}
+    %meta{name: "generator", content: "Nanoc #{Nanoc::VERSION}"}
+
+    - @items.find_all("/style/*.scss").each do |item|
+      %link{rel: "stylesheet", href: item.path}
+
+    - @items.find_all("/js/*.js").each do |item|
+      %script{src: item.path}
+
+    %link{rel: "shortcut icon", type: "image/png", href: items["/img/favicon.png"].path}
+
+    %title
+      = item[:title]
+  %body
+    #content-wrapper
+      = yield

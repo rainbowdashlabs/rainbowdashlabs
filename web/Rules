@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+require 'gitlab_kramdown'
+TITLE_FILTER_REGEXP = /(#\s)/.freeze
+
+preprocess do
+  @items.each do |item|
+    next if item.binary?
+
+    # We need to do some transformations for the title
+    # Let's extract and keep it first:
+    raw_title = item.raw_content.match(/^# .*$/).to_s
+
+    # If we don't have a title in frontmatter, reuse the one we just fetch
+    item[:title] ||= raw_title.gsub(TITLE_FILTER_REGEXP, '')
+  end
+end
+
+compile '/**/*.md' do
+  filter :gitlab_kramdown,
+         input: 'GitlabKramdown',
+         syntax_highlighter: 'rouge',
+         syntax_highlighter_opts: {
+           guess_lang: true
+         },
+         toc_levels: 2..6,
+         with_toc: !item[:hide_toc]
+  filter :convert_mermaid_html
+  filter :colorize_syntax,
+         default_colorizer: :rouge
+
+  if item[:layout]
+    layout "/#{item[:layout]}.haml"
+  else
+    layout '/default.haml'
+  end
+
+  filter :relativize_paths, :type => :html
+end
+
+layout '/**/*', :haml, format: :html5
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
