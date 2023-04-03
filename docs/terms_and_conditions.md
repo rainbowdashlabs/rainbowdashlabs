@@ -29,4 +29,4 @@ Upon purchase you receive one license key.\
 One discord account per purchase will be able to claim that license on our Discord and receive access to the support channel.\
 You may grant up to two more users access to plugin downloads and support channel.\
 Developer Support is only provided in buyer exclusive channels.\
-You may lose access to the support channels if you violate the discord server rules.\
+You may lose access to the support channels if you violate the discord server rules.
