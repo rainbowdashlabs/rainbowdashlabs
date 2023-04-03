@@ -25,6 +25,8 @@ Refunds are not available under any circumstances.\
 Make sure the plugin suits your requirements before purchasing the plugin.
 
 ## Support
-One discord account per purchase will receive a Buyer role on our Discord.\
+Upon purchase you receive one license key.\
+One discord account per purchase will be able to claim that license on our Discord and receive access to the support channel.\
+You may grant up to two more users access to plugin downloads and support channel.\
 Developer Support is only provided in buyer exclusive channels.\
-You may lose access to the support channels if you violate our discord rules.
+You may lose access to the support channels if you violate the discord server rules.\
