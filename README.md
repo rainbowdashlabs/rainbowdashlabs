@@ -10,7 +10,7 @@ check it out. All my work is open source since I think it is important to share 
 bunch of tutorials, which teach you how to work with databases. Check it out on my repositories.
 
 If you want to contact me, the fastest way is via
-Discord ([Chojo#0001](https://discordapp.com/users/214347948316819456/))
+Discord ([@chojo](https://discordapp.com/users/214347948316819456/))
 
 **I also heard that cool persons leave a cool message in
 my [Guestbook](https://github.com/RainbowDashLabs/RainbowDashLabs/discussions/1)**
