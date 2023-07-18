@@ -14,7 +14,7 @@
   "prHourlyLimit": 10,
   "packageRules": [
     {
-      "matchDepNames": ["gradle", "maven"],
+      "matchDepNames": ["gradle", "maven", "com.diffplug.spotless"],
       "automerge": true,
       "squash": true
     }
