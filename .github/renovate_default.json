@@ -21,7 +21,8 @@
         "org.gradle.toolchains.foojay-resolver-convention",
         "org.junit.jupiter:junit-jupiter-api",
         "org.junit.jupiter:junit-jupiter-engine",
-        "org.junit:junit-bom"
+        "org.junit:junit-bom",
+        "de.chojo.publishdata"
       ],
       "automerge": true,
       "squash": true
