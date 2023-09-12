@@ -24,7 +24,8 @@
         "org.junit:junit-bom",
         "de.chojo.publishdata",
         "actions/checkout",
-        "docker/build-push-action"
+        "docker/build-push-action",
+        "docker/login-action"
       ],
       "automerge": true,
       "squash": true
