@@ -23,7 +23,8 @@
         "org.junit.jupiter:junit-jupiter-engine",
         "org.junit:junit-bom",
         "de.chojo.publishdata",
-        "actions/checkout"
+        "actions/checkout",
+        "docker/build-push-action"
       ],
       "automerge": true,
       "squash": true
