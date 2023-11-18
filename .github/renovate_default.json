@@ -42,7 +42,8 @@
             "groupName": "log4j",
             "matchPackagePatterns": [
                 "org.apache.logging.log4j:log4j-core",
-                "org.apache.logging.log4j:log4j-slf4j2-impl"
+                "org.apache.logging.log4j:log4j-slf4j2-impl",
+                "org.apache.logging.log4j:log4j-layout-template-json"
             ],
             "automerge": true,
             "squash": true
