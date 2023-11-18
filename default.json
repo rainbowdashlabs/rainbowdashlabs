@@ -60,7 +60,8 @@
                 "docker/login-action",
                 "com.bucket4j:bucket4j-core",
                 "org.apache.commons:commons-text",
-                "org.jetbrains:annotations"
+                "org.jetbrains:annotations",
+                "org.mockito:mockito-core"
             ],
             "automerge": true,
             "squash": true
