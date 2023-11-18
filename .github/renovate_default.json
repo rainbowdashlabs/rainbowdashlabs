@@ -1,34 +1,76 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": ["dev"],
-  "dependencyDashboard": true,
-  "labels": ["dependencies"],
-  "branchPrefix": "deps/",
-  "extends": [
-    "config:base"
-  ],
-  "reviewers": [
-    "RainbowDashLabs"
-  ],
-  "prConcurrentLimit": 3,
-  "prHourlyLimit": 10,
-  "packageRules": [
-    {
-      "matchDepNames": [
-        "gradle",
-        "maven",
-        "com.diffplug.spotless",
-        "org.gradle.toolchains.foojay-resolver-convention",
-        "org.junit.jupiter:junit-jupiter-api",
-        "org.junit.jupiter:junit-jupiter-engine",
-        "org.junit:junit-bom",
-        "de.chojo.publishdata",
-        "actions/checkout",
-        "docker/build-push-action",
-        "docker/login-action"
-      ],
-      "automerge": true,
-      "squash": true
-    }
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "baseBranches": [
+        "dev"
+    ],
+    "dependencyDashboard": true,
+    "labels": [
+        "dependencies"
+    ],
+    "branchPrefix": "deps/",
+    "extends": [
+        "config:base"
+    ],
+    "reviewers": [
+        "RainbowDashLabs"
+    ],
+    "prConcurrentLimit": 3,
+    "prHourlyLimit": 10,
+    "packageRules": [
+        {
+            "groupName": "jackson",
+            "matchPackagePatterns": [
+                "com.fasterxml.jackson.core:jackson-core",
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ],
+            "automerge": true,
+            "squash": true
+        },
+        {
+            "groupName": "junit",
+            "matchPackagePatterns": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit:junit-bom"
+            ],
+            "automerge": true,
+            "squash": true
+        },
+        {
+            "groupName": "log4j",
+            "matchPackagePatterns": [
+                "org.apache.logging.log4j:log4j-core",
+                "org.apache.logging.log4j:log4j-slf4j2-impl"
+            ],
+            "automerge": true,
+            "squash": true
+        },
+        {
+            "matchDepNames": [
+                "gradle",
+                "maven",
+                "com.diffplug.spotless",
+                "org.gradle.toolchains.foojay-resolver-convention",
+                "de.chojo.publishdata",
+                "actions/checkout",
+                "docker/build-push-action",
+                "docker/login-action",
+                "com.bucket4j:bucket4j-core",
+                "org.apache.commons:commons-text",
+                "org.jetbrains:annotations"
+            ],
+            "automerge": true,
+            "squash": true
+        },
+        {
+            "matchDepNames": [
+                "eclipse-temurin",
+                "postgres"
+            ],
+            "automerge": true,
+            "squash": true
+        }
+    ]
 }
