@@ -62,7 +62,8 @@
                 "com.bucket4j:bucket4j-core",
                 "org.apache.commons:commons-text",
                 "org.jetbrains:annotations",
-                "org.mockito:mockito-core"
+                "org.mockito:mockito-core",
+                "org.postgresql:postgresql"
             ],
             "automerge": true,
             "squash": true
