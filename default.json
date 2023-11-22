@@ -75,6 +75,14 @@
             ],
             "automerge": true,
             "squash": true
+        },
+        {
+            "groupName": "sadu",
+            "matchPackagePatterns": [
+                "de.chojo.sadu"
+            ],
+            "automerge": true,
+            "squash": true
         }
     ]
 }
