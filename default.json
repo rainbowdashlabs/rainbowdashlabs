@@ -57,6 +57,7 @@
                 "org.gradle.toolchains.foojay-resolver-convention",
                 "de.chojo.publishdata",
                 "actions/checkout",
+                "actions/setup-java",
                 "docker/build-push-action",
                 "docker/login-action",
                 "com.bucket4j:bucket4j-core",
