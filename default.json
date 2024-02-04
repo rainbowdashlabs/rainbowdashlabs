@@ -60,6 +60,7 @@
                 "actions/setup-java",
                 "docker/build-push-action",
                 "docker/login-action",
+                "gradle/wrapper-validation-action",
                 "com.bucket4j:bucket4j-core",
                 "org.apache.commons:commons-text",
                 "org.jetbrains:annotations",
