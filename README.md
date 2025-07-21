@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-It's me! You often find me using the names Chojo or Lilly when I am somewhere around in the internet (Except here
+It's me! You often find me using the names Chojo or Nora when I am somewhere around in the internet (Except here
 for no reason).
 
 I am passionate about Java and SQL (yes...). Also like nearly everyone I want to do more stuff than I have time left.
