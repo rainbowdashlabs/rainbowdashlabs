@@ -18,15 +18,54 @@
     "prHourlyLimit": 10,
     "packageRules": [
         {
-            "groupName": "jackson",
-            "matchPackagePatterns": [
-                "com.fasterxml.jackson.core:jackson-core",
-                "com.fasterxml.jackson.core:jackson-databind",
-                "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml",
-                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            "matchManagers": [
+                "npm"
+            ],
+            "stabilityDays": 14,
+            "schedule": [
+                "on friday"
+            ]
+        },
+        {
+            "matchManagers": [
+                "pip_requirements",
+                "pip_setup",
+                "pipenv",
+                "poetry",
+                "pip-compile",
+                "pyenv"
+            ],
+            "schedule": [
+                "on thursday"
+            ]
+        },
+        {
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
             ],
             "automerge": true,
-            "squash": true
+            "squash": true,
+            "automergeType": "branch"
+        },
+        {
+            "matchManagers": [
+                "github-actions",
+                "maven",
+                "gradle"
+            ],
+            "automerge": true,
+            "squash": true,
+            "automergeType": "branch"
+        },
+        {
+            "groupName": "jackson",
+            "matchPackagePatterns": [
+                "^com\\.fasterxml\\.jackson\\.",
+                "^tools\\.jackson"
+            ]
         },
         {
             "groupName": "junit",
@@ -34,57 +73,19 @@
                 "org.junit.jupiter:junit-jupiter-api",
                 "org.junit.jupiter:junit-jupiter-engine",
                 "org.junit:junit-bom"
-            ],
-            "automerge": true,
-            "squash": true
+            ]
         },
         {
             "groupName": "log4j",
             "matchPackagePatterns": [
-                "org.apache.logging.log4j:log4j-core",
-                "org.apache.logging.log4j:log4j-slf4j2-impl",
-                "org.apache.logging.log4j:log4j-layout-template-json",
-                "org.apache.logging.log4j:log4j-slf4j-impl"
-            ],
-            "automerge": true,
-            "squash": true
-        },
-        {
-            "matchDepNames": [
-                "gradle",
-                "maven",
-                "com.diffplug.spotless",
-                "org.gradle.toolchains.foojay-resolver-convention",
-                "de.chojo.publishdata",
-                "actions/checkout",
-                "actions/setup-java",
-                "docker/build-push-action",
-                "docker/login-action",
-                "gradle/wrapper-validation-action",
-                "com.bucket4j:bucket4j-core",
-                "org.apache.commons:commons-text",
-                "org.jetbrains:annotations",
-                "org.mockito:mockito-core",
-                "org.postgresql:postgresql"
-            ],
-            "automerge": true,
-            "squash": true
-        },
-        {
-            "matchDepNames": [
-                "eclipse-temurin",
-                "postgres"
-            ],
-            "automerge": true,
-            "squash": true
+                "^org\\.apache\\.logging\\.log4j:"
+            ]
         },
         {
             "groupName": "sadu",
             "matchPackagePatterns": [
                 "de.chojo.sadu"
-            ],
-            "automerge": true,
-            "squash": true
+            ]
         }
     ]
 }
