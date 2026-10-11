@@ -1,6 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "baseBranches": [
+    "baseBranchPatterns": [
         "dev"
     ],
     "dependencyDashboard": true,
@@ -9,7 +9,7 @@
     ],
     "branchPrefix": "deps/",
     "extends": [
-        "config:base"
+        "config:recommended"
     ],
     "timezone": "Europe/Berlin",
     "schedule": [
