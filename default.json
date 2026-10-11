@@ -11,6 +11,10 @@
     "extends": [
         "config:base"
     ],
+    "timezone": "Europe/Berlin",
+    "schedule": [
+        "before 6am on monday"
+    ],
     "reviewers": [
         "RainbowDashLabs"
     ],
@@ -18,26 +22,11 @@
     "prHourlyLimit": 10,
     "packageRules": [
         {
+            "description": "npm packages wait 14 days after release",
             "matchManagers": [
                 "npm"
             ],
-            "stabilityDays": 14,
-            "schedule": [
-                "on friday"
-            ]
-        },
-        {
-            "matchManagers": [
-                "pip_requirements",
-                "pip_setup",
-                "pipenv",
-                "poetry",
-                "pip-compile",
-                "pyenv"
-            ],
-            "schedule": [
-                "on thursday"
-            ]
+            "minimumReleaseAge": "14 days"
         },
         {
             "description": "Auto-merge minor and patch updates",
