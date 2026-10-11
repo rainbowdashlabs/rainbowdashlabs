@@ -40,6 +40,7 @@
             ]
         },
         {
+            "description": "Auto-merge minor and patch updates",
             "matchUpdateTypes": [
                 "minor",
                 "patch",
@@ -47,45 +48,31 @@
                 "digest"
             ],
             "automerge": true,
-            "squash": true,
             "automergeType": "branch"
         },
         {
-            "matchManagers": [
-                "github-actions",
-                "maven",
-                "gradle"
+            "description": "Major updates require a PR and manual approval",
+            "matchUpdateTypes": [
+                "major"
             ],
-            "automerge": true,
-            "squash": true,
-            "automergeType": "branch"
+            "automerge": false
         },
         {
-            "groupName": "jackson",
-            "matchPackagePatterns": [
-                "^com\\.fasterxml\\.jackson\\.",
-                "^tools\\.jackson"
-            ]
+            "description": "Group all non-major dependency updates",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "groupName": "all non-major dependencies",
+            "groupSlug": "all-minor-patch"
         },
         {
-            "groupName": "junit",
-            "matchPackagePatterns": [
-                "org.junit.jupiter:junit-jupiter-api",
-                "org.junit.jupiter:junit-jupiter-engine",
-                "org.junit:junit-bom"
-            ]
-        },
-        {
-            "groupName": "log4j",
-            "matchPackagePatterns": [
-                "^org\\.apache\\.logging\\.log4j:"
-            ]
-        },
-        {
-            "groupName": "sadu",
-            "matchPackagePatterns": [
-                "de.chojo.sadu"
-            ]
+            "description": "Group all major updates",
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "groupName": "major updates",
+            "groupSlug": "major"
         }
     ]
 }
